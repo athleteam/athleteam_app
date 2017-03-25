@@ -14,7 +14,7 @@ public class AddOrSee extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_add_or_see);
+        setContentView(R.layout.activity_add_or_see);//comment
 
         //Button create = (Button) findViewById(R.id.button2);
         //create.setOnClickListener(new View.OnClickListener()
