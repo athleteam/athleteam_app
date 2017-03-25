@@ -14,27 +14,27 @@ public class AddOrSee extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_add_or_see);//comment
+        setContentView(R.layout.activity_add_or_see);
 
-        //Button create = (Button) findViewById(R.id.button2);
-        //create.setOnClickListener(new View.OnClickListener()
-        //{
-            //public void onClick(View view)
-            //{
-                //Intent myIntent = new Intent(view.getContext(), );
-                //startActivityForResult(myIntent, 0);
-            //}
-        //});
+        Button create = (Button) findViewById(R.id.button2);
+        create.setOnClickListener(new View.OnClickListener()
+        {
+            public void onClick(View view)
+            {
+                Intent myIntent = new Intent(view.getContext(), CreateGame.class);
+                startActivityForResult(myIntent, 0);
+            }
+        });
 
-        //Button join = (Button) findViewById(R.id.button4);
-        //join.setOnClickListener(new View.OnClickListener()
-        //{
-            //public void onClick(View view)
-            //{
-                //Intent myIntent = new Intent(view.getContext(), );
-                //startActivityForResult(myIntent, 0);
-            //}
-        //});
+        Button join = (Button) findViewById(R.id.button4);
+        join.setOnClickListener(new View.OnClickListener()
+        {
+            public void onClick(View view)
+            {
+                Intent myIntent = new Intent(view.getContext(), ActivityList.class);
+                startActivityForResult(myIntent, 0);
+            }
+        });
 
     }
 

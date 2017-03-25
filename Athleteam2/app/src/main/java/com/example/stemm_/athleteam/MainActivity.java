@@ -17,8 +17,7 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //Intent transferSport = new Intent(getApplicationContext(), );
-        //Intent transferSport = new Intent(getApplicationContext(), );
+        final Intent transferSport = new Intent(getApplicationContext(), ActivityList.class);
 
         Button frisbee = (Button) findViewById(R.id.button2);
         frisbee.setOnClickListener(new View.OnClickListener()
@@ -27,8 +26,8 @@ public class MainActivity extends Activity {
             {
                 Intent myIntent = new Intent(view.getContext(), AddOrSee.class);
                 startActivityForResult(myIntent, 0);
-                //transferSport.putExtra("frisbee");
-                //startActivity(transferSport);
+                transferSport.putExtra("sport", "frisbee");
+                startActivity(transferSport);
             }
         });
 
@@ -39,8 +38,8 @@ public class MainActivity extends Activity {
             {
                 Intent myIntent = new Intent(view.getContext(), AddOrSee.class);
                 startActivityForResult(myIntent, 0);
-                //transferSport.putExtra("soccer");
-                //startActivity(transferSport);
+                transferSport.putExtra("sport", "soccer");
+                startActivity(transferSport);
             }
         });
 
@@ -51,8 +50,8 @@ public class MainActivity extends Activity {
             {
                 Intent myIntent = new Intent(view.getContext(), AddOrSee.class);
                 startActivityForResult(myIntent, 0);
-                //transferSport.putExtra("basketball");
-                //startActivity(transferSport);
+                transferSport.putExtra("sport", "basketball");
+                startActivity(transferSport);
             }
         });
     }
